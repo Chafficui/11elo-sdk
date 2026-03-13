@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'php/**'
+      - '.github/workflows/split-php.yml'
 
 jobs:
   split:
@@ -19,6 +20,8 @@ jobs:
         env:
           PAT: ${{ secrets.SUBTREE_PAT }}
         run: |
+          # Remove the default credential helper set by actions/checkout
+          git config --unset-all http.https://github.com/.extraheader || true
           git subtree split --prefix=php -b php-split
           git remote add php-target https://x-access-token:${PAT}@github.com/Chafficui/elevenelo-php.git
           git push php-target php-split:main --force
