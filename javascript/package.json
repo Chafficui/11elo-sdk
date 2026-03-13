@@ -1,0 +1,37 @@
+{
+  "name": "11elo",
+  "version": "0.1.0",
+  "description": "JavaScript/Node.js client for the 11elo Soccer ELO API",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "files": [
+    "src"
+  ],
+  "keywords": [
+    "soccer",
+    "football",
+    "elo",
+    "bundesliga",
+    "api",
+    "client"
+  ],
+  "license": "MIT",
+  "homepage": "https://11elo.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Chafficui/11elo-clients.git",
+    "directory": "javascript"
+  },
+  "bugs": {
+    "url": "https://github.com/Chafficui/11elo-clients/issues"
+  },
+  "scripts": {
+    "test": "node --test src/client.test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
