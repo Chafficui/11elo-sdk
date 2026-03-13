@@ -34,7 +34,7 @@ dev = [
 [project.urls]
 Homepage = "https://11elo.com"
 Documentation = "https://11elo.com/api-docs"
-Repository = "https://github.com/Chafficui/11elo-clients"
+Repository = "https://github.com/Chafficui/11elo-sdk"
 
 [tool.setuptools.packages.find]
 where = ["."]

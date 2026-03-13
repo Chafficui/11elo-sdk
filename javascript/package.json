@@ -22,11 +22,11 @@
   "homepage": "https://11elo.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Chafficui/11elo-clients.git",
+    "url": "https://github.com/Chafficui/11elo-sdk.git",
     "directory": "javascript"
   },
   "bugs": {
-    "url": "https://github.com/Chafficui/11elo-clients/issues"
+    "url": "https://github.com/Chafficui/11elo-sdk/issues"
   },
   "scripts": {
     "test": "node --test src/client.test.js"

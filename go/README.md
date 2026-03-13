@@ -1,6 +1,6 @@
 # elevenelo (Go)
 
-[![Go Reference](https://pkg.go.dev/badge/github.com/Chafficui/11elo-clients/go.svg)](https://pkg.go.dev/github.com/Chafficui/11elo-clients/go)
+[![Go Reference](https://pkg.go.dev/badge/github.com/Chafficui/11elo-sdk/go.svg)](https://pkg.go.dev/github.com/Chafficui/11elo-sdk/go)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Go client for the **[11elo](https://11elo.com) Soccer ELO API** — live and historical Elo ratings for German football (Bundesliga, 2. Bundesliga, 3. Liga).
@@ -10,7 +10,7 @@ No external dependencies — uses the Go standard library only (`net/http`).
 ## Installation
 
 ```bash
-go get github.com/Chafficui/11elo-clients/go@latest
+go get github.com/Chafficui/11elo-sdk/go@latest
 ```
 
 Requires **Go 1.21+**.
@@ -25,7 +25,7 @@ import (
     "fmt"
     "log"
 
-    elevenelo "github.com/Chafficui/11elo-clients/go"
+    elevenelo "github.com/Chafficui/11elo-sdk/go"
 )
 
 func main() {
@@ -221,7 +221,7 @@ All errors are returned as Go `error` values.  You can type-assert to one of the
 ```go
 import (
     "errors"
-    elevenelo "github.com/Chafficui/11elo-clients/go"
+    elevenelo "github.com/Chafficui/11elo-sdk/go"
 )
 
 team, err := client.GetTeam(ctx, "Unknown FC")

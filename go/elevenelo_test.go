@@ -7,7 +7,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	elevenelo "github.com/Chafficui/11elo-clients/go"
+	elevenelo "github.com/Chafficui/11elo-sdk/go"
 )
 
 // newTestClient builds a Client pointed at the given test server URL.
