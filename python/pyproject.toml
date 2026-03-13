@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "elevenelo"
-version = "0.1.0"
+version = "0.1.1"
 description = "Python client for the 11elo Soccer ELO API"
 readme = "README.md"
 license = { text = "MIT" }
@@ -33,7 +33,7 @@ dev = [
 
 [project.urls]
 Homepage = "https://11elo.com"
-Documentation = "https://11elo.com/api-docs"
+Documentation = "https://www.11elo.com/docs"
 Repository = "https://github.com/Chafficui/11elo-sdk"
 
 [tool.setuptools.packages.find]

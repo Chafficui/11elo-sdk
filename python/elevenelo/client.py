@@ -28,7 +28,7 @@ from .exceptions import (
 
 __all__ = ["Client"]
 
-_DEFAULT_BASE_URL = "https://11elo.com"
+_DEFAULT_BASE_URL = "https://api.11elo.com"
 _DEFAULT_TIMEOUT = 30
 
 
@@ -39,7 +39,7 @@ class Client:
     ----------
     api_key:
         Your 11elo API key (format ``11e_<tier>_<hex>``).  Obtain one for free
-        at https://11elo.com/developer.
+        at https://www.11elo.com/docs.
     base_url:
         Override the default API base URL.  Useful for self-hosted instances or
         local development.
@@ -90,12 +90,12 @@ class Client:
     def _handle_response(self, response: requests.Response) -> Any:
         if response.status_code == 401:
             raise AuthenticationError(
-                "Invalid or missing API key.  Obtain one at https://11elo.com/developer"
+                "Invalid or missing API key.  Obtain one at https://www.11elo.com/docs"
             )
         if response.status_code == 429:
             reset_at = response.headers.get("X-RateLimit-Reset")
             raise RateLimitError(
-                "Daily rate limit exceeded.  Upgrade your plan at https://11elo.com/developer",
+                "Daily rate limit exceeded.  Upgrade your plan at https://www.11elo.com/docs",
                 reset_at=reset_at,
             )
         if response.status_code == 404:

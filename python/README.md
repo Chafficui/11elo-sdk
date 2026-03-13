@@ -38,7 +38,7 @@ for match in upcoming:
 
 ## Getting an API key
 
-Register for free at <https://11elo.com/developer>.  
+Register for free at <https://www.11elo.com/docs>.  
 Keys follow the format `11e_<tier>_<hex>` and are passed via the `X-API-Key` request header (handled automatically by this client).
 
 **Rate limits by tier:**
@@ -56,7 +56,7 @@ Keys follow the format `11e_<tier>_<hex>` and are passed via the `X-API-Key` req
 | Parameter  | Default                 | Description                                    |
 |------------|-------------------------|------------------------------------------------|
 | `api_key`  | —                       | Your 11elo API key (**required**)              |
-| `base_url` | `https://11elo.com`     | Override for self-hosted / local dev           |
+| `base_url` | `https://api.11elo.com`     | Override for self-hosted / local dev           |
 | `timeout`  | `30`                    | HTTP request timeout in seconds                |
 | `session`  | `None` (auto-created)   | Custom `requests.Session`                      |
 

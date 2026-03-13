@@ -17,7 +17,7 @@ import {
   ApiError,
 } from './index.js';
 
-const BASE = 'https://11elo.com';
+const BASE = 'https://api.11elo.com';
 
 // ---------------------------------------------------------------------------
 // Minimal fetch mock helpers

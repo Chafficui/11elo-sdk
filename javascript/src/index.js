@@ -16,7 +16,7 @@
  * @module
  */
 
-const DEFAULT_BASE_URL = 'https://11elo.com';
+const DEFAULT_BASE_URL = 'https://api.11elo.com';
 const DEFAULT_TIMEOUT_MS = 30_000;
 
 // ---------------------------------------------------------------------------
@@ -37,7 +37,7 @@ export class ElevenEloError extends Error {
  * Thrown when the API key is missing or invalid (HTTP 401).
  */
 export class AuthenticationError extends ElevenEloError {
-  constructor(message = 'Invalid or missing API key. Obtain one at https://11elo.com/developer') {
+  constructor(message = 'Invalid or missing API key. Obtain one at https://www.11elo.com/docs') {
     super(message);
     this.name = 'AuthenticationError';
   }
@@ -48,7 +48,7 @@ export class AuthenticationError extends ElevenEloError {
  * @property {string|null} resetAt - ISO-8601 timestamp when the limit resets.
  */
 export class RateLimitError extends ElevenEloError {
-  constructor(message = 'Daily rate limit exceeded. Upgrade your plan at https://11elo.com/developer', resetAt = null) {
+  constructor(message = 'Daily rate limit exceeded. Upgrade your plan at https://www.11elo.com/docs', resetAt = null) {
     super(message);
     this.name = 'RateLimitError';
     this.resetAt = resetAt;
@@ -95,7 +95,7 @@ export class Client {
   /**
    * @param {object} options
    * @param {string} options.apiKey - Your 11elo API key (required).
-   * @param {string} [options.baseUrl='https://11elo.com'] - Override the base URL.
+   * @param {string} [options.baseUrl='https://api.11elo.com'] - Override the base URL.
    * @param {number} [options.timeoutMs=30000] - Request timeout in milliseconds.
    */
   constructor({ apiKey, baseUrl = DEFAULT_BASE_URL, timeoutMs = DEFAULT_TIMEOUT_MS } = {}) {

@@ -29,7 +29,7 @@ import (
 )
 
 const (
-	defaultBaseURL = "https://11elo.com"
+	defaultBaseURL = "https://api.11elo.com"
 	defaultTimeout = 30 * time.Second
 )
 
@@ -113,12 +113,12 @@ func (c *Client) get(ctx context.Context, path string, params url.Values) (json.
 	switch resp.StatusCode {
 	case http.StatusUnauthorized:
 		return nil, &AuthenticationError{
-			Message: "invalid or missing API key – obtain one at https://11elo.com/developer",
+			Message: "invalid or missing API key – obtain one at https://www.11elo.com/docs",
 		}
 	case http.StatusTooManyRequests:
 		resetAt := resp.Header.Get("X-RateLimit-Reset")
 		return nil, &RateLimitError{
-			Message: "daily rate limit exceeded – upgrade your plan at https://11elo.com/developer",
+			Message: "daily rate limit exceeded – upgrade your plan at https://www.11elo.com/docs",
 			ResetAt: resetAt,
 		}
 	case http.StatusNotFound:

@@ -68,7 +68,7 @@ func main() {
 
 ## Getting an API key
 
-Register for free at <https://11elo.com/developer>.  
+Register for free at <https://www.11elo.com/docs>.  
 Keys follow the format `11e_<tier>_<hex>` and are sent via the `X-API-Key` request header (handled automatically by this client).
 
 **Rate limits by tier:**
@@ -85,7 +85,7 @@ Keys follow the format `11e_<tier>_<hex>` and are sent via the `X-API-Key` reque
 
 | Option | Default | Description |
 |--------|---------|-------------|
-| `WithBaseURL(url)` | `https://11elo.com` | Override for self-hosted / local dev |
+| `WithBaseURL(url)` | `https://api.11elo.com` | Override for self-hosted / local dev |
 | `WithTimeout(d)` | `30s` | HTTP request timeout |
 | `WithHTTPClient(c)` | auto-created | Custom `*http.Client` |
 

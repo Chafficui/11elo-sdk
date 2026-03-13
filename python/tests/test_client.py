@@ -13,7 +13,7 @@ from elevenelo.exceptions import (
     RateLimitError,
 )
 
-BASE = "https://11elo.com"
+BASE = "https://api.11elo.com"
 
 
 @pytest.fixture
