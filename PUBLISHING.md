@@ -31,7 +31,13 @@ git push origin go/v0.2.0
 
 ## PHP (Packagist)
 
-Register the package on [packagist.org](https://packagist.org/) pointing to this repository's `php/` directory. New versions are picked up automatically via git tags.
+The `php/` directory is automatically mirrored to [github.com/Chafficui/elevenelo-php](https://github.com/Chafficui/elevenelo-php) via a GitHub Actions subtree split (`.github/workflows/split-php.yml`). Packagist is pointed at that mirror repo.
+
+**Setup (one-time):**
+1. Add a PAT with `repo` scope as the `SUBTREE_PAT` secret in the 11elo-sdk repo settings
+2. Register `Chafficui/elevenelo-php` on [packagist.org](https://packagist.org/)
+
+New versions are picked up automatically via git tags on the mirror repo.
 
 ## Release checklist
 
